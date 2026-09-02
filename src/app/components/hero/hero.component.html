@@ -1,0 +1,100 @@
+<section id="hero" class="hero-section">
+  <!-- Animated background grid -->
+  <div class="grid-bg"></div>
+  <!-- Glowing orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <p class="hero-greeting animate-delay-1">
+        <span class="mono-bracket">//</span> Hello, World! I'm
+      </p>
+      <h1 class="hero-name animate-delay-2">Pavan Bakal</h1>
+      <div class="hero-role animate-delay-3">
+        <span class="role-prefix">const role = "</span>
+        <span class="typed-text">{{displayText}}</span>
+        <span class="cursor">|</span>
+        <span class="role-suffix">";</span>
+      </div>
+      <p class="hero-description animate-delay-4">
+        Results-driven engineer with <strong>3.5 years</strong> of experience building enterprise applications.
+        Passionate about clean architecture, microservices, and delivering scalable solutions that make an impact.
+      </p>
+
+      <div class="hero-stats animate-delay-5">
+        <div class="stat">
+          <span class="stat-num">3.5<span class="stat-unit">yr</span></span>
+          <span class="stat-label">Experience</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">13<span class="stat-unit">+</span></span>
+          <span class="stat-label">Microservices</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">25<span class="stat-unit">+</span></span>
+          <span class="stat-label">REST APIs</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">40<span class="stat-unit">%</span></span>
+          <span class="stat-label">Bug Reduction</span>
+        </div>
+      </div>
+
+      <div class="hero-actions animate-delay-6">
+        <a href="mailto:pavangbakal@gmail.com" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Get In Touch
+        </a>
+        <button class="btn btn-outline" (click)="scrollTo('#projects')">
+          <i class="fas fa-code"></i> View Projects
+        </button>
+      </div>
+
+      <div class="hero-socials animate-delay-7">
+        <a href="https://www.linkedin.com/in/pavangbakal" target="_blank" class="social-link" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:pavangbakal@gmail.com" class="social-link" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+918010431769" class="social-link" title="Phone">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual animate-delay-3">
+      <div class="avatar-ring">
+        <div class="avatar-inner">
+          <!-- <span class="avatar-initials">PB</span> -->
+          <img src="assets/images/pavan.png" alt="Pavan Bakal" class="avatar-photo">
+        </div>
+        <div class="ring ring-1"></div>
+        <div class="ring ring-2"></div>
+      </div>
+
+      <div class="tech-badge badge-1">
+        <i class="fab fa-java"></i> Java 17
+      </div>
+      <div class="tech-badge badge-2">
+        <i class="fas fa-leaf"></i> Spring Boot
+      </div>
+      <div class="tech-badge badge-3">
+        <i class="fab fa-angular"></i> Angular
+      </div>
+      <div class="tech-badge badge-4">
+        <i class="fas fa-cubes"></i> Microservices
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint" (click)="scrollTo('#about')">
+    <span>Scroll</span>
+    <div class="scroll-arrow">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </div>
+</section>

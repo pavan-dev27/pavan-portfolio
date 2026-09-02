@@ -1,0 +1,43 @@
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">What I Know</p>
+      <h2 class="section-title">Technical <span>Skills</span></h2>
+      <div class="section-divider"></div>
+      <p class="section-sub">A broad toolkit honed across enterprise projects, government portals, and cloud-native systems.</p>
+    </div>
+
+    <!-- Skill groups -->
+    <div class="skills-grid">
+      <div class="skill-group card" *ngFor="let group of skillGroups">
+        <div class="group-header">
+          <div class="group-icon" [style.background]="'rgba(' + hexToRgb(group.color) + ', 0.1)'"
+               [style.border-color]="'rgba(' + hexToRgb(group.color) + ', 0.25)'">
+            <i [class]="group.icon" [style.color]="group.color"></i>
+          </div>
+          <h3 class="group-title">{{group.category}}</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag" *ngFor="let skill of group.skills">{{skill}}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Proficiency bars -->
+    <div class="proficiency-section">
+      <h3 class="proficiency-title">Core Proficiencies</h3>
+      <div class="proficiency-bars">
+        <div class="bar-item" *ngFor="let p of proficiencies">
+          <div class="bar-info">
+            <span class="bar-name">{{p.name}}</span>
+            <span class="bar-percent">{{p.level}}%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" [style.width]="p.level + '%'"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

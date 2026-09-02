@@ -1,0 +1,43 @@
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <p class="section-label">What I've Built</p>
+    <h2 class="section-title">Key <span>Projects</span></h2>
+    <div class="section-divider"></div>
+
+    <!-- Featured projects -->
+    <div class="projects-grid">
+      <div class="project-card card" *ngFor="let project of projects; let i = index"
+           [class.featured]="project.featured">
+
+        <div class="project-top">
+          <div class="project-icon-wrap" [style.background]="'rgba(0,0,0,0.3)'"
+               [style.border-color]="project.color + '33'">
+            <i [class]="project.icon" [style.color]="project.color"></i>
+          </div>
+          <div class="project-period">
+            <i class="fas fa-calendar"></i> {{project.period}}
+          </div>
+        </div>
+
+        <div class="project-badge" *ngIf="project.featured">Featured</div>
+
+        <h3 class="project-title">{{project.title}}</h3>
+        <p class="project-subtitle">{{project.subtitle}}</p>
+        <p class="project-desc">{{project.description}}</p>
+
+        <ul class="project-highlights">
+          <li *ngFor="let h of project.highlights">
+            <i class="fas fa-check-circle"></i>
+            <span>{{h}}</span>
+          </li>
+        </ul>
+
+        <div class="project-tech">
+          <span class="tag" *ngFor="let t of project.tech">{{t}}</span>
+        </div>
+
+        <div class="card-glow" [style.background]="project.color + '08'"></div>
+      </div>
+    </div>
+  </div>
+</section>

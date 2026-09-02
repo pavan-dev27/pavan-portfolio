@@ -1,0 +1,23 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    <a class="nav-logo" (click)="scrollTo('#hero')">
+      <span class="logo-bracket">&lt;</span>PB<span class="logo-bracket">/&gt;</span>
+    </a>
+
+    <ul class="nav-links" [class.open]="menuOpen">
+      <li *ngFor="let link of navLinks; let i = index">
+        <a [style.animation-delay]="(i * 0.1) + 's'"
+           (click)="scrollTo(link.href)">
+          <span class="link-num">0{{i+1}}.</span> {{link.label}}
+        </a>
+      </li>
+      <li>
+        <a href="mailto:pavangbakal@gmail.com" class="nav-cta">Hire Me</a>
+      </li>
+    </ul>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,80 @@
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="contact-header">
+      <p class="section-label">Get In Touch</p>
+      <h2 class="section-title">Let's <span>Connect</span></h2>
+      <div class="section-divider" style="margin: 0 auto 1rem;"></div>
+      <p class="contact-intro">
+        Open to full-time roles, freelance projects, or just a good conversation about tech.
+        Drop me a message — I typically respond within 24 hours.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Info panel -->
+      <div class="contact-info">
+        <div class="info-card" *ngFor="let item of contactInfo">
+          <div class="info-icon">
+            <i [class]="item.icon"></i>
+          </div>
+          <div class="info-content">
+            <div class="info-label">{{item.label}}</div>
+            <a *ngIf="item.href" [href]="item.href" target="_blank" class="info-value link">{{item.value}}</a>
+            <span *ngIf="!item.href" class="info-value">{{item.value}}</span>
+          </div>
+        </div>
+
+        <div class="availability-badge">
+          <span class="avail-dot"></span>
+          <span>Currently looking for new opportunities</span>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form-wrap">
+        <div class="success-msg" *ngIf="submitStatus === 'success'">
+          <i class="fas fa-check-circle"></i>
+          <p>Message sent! I'll get back to you soon.</p>
+        </div>
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" *ngIf="submitStatus !== 'success'">
+          <div class="form-row">
+            <div class="form-group" [class.error]="submitted && f['name'].errors">
+              <label for="name">Your Name</label>
+              <input id="name" type="text" formControlName="name" placeholder="Pavan Bakal">
+              <span class="err-msg" *ngIf="submitted && f['name'].errors?.['required']">Name is required.</span>
+            </div>
+            <div class="form-group" [class.error]="submitted && f['email'].errors">
+              <label for="email">Email Address</label>
+              <input id="email" type="email" formControlName="email" placeholder="you@example.com">
+              <span class="err-msg" *ngIf="submitted && f['email'].errors?.['required']">Email is required.</span>
+              <span class="err-msg" *ngIf="submitted && f['email'].errors?.['email']">Enter a valid email.</span>
+            </div>
+          </div>
+
+          <div class="form-group" [class.error]="submitted && f['subject'].errors">
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" formControlName="subject" placeholder="Job opportunity / Project collaboration">
+            <span class="err-msg" *ngIf="submitted && f['subject'].errors?.['required']">Subject is required.</span>
+          </div>
+
+          <div class="form-group" [class.error]="submitted && f['message'].errors">
+            <label for="message">Message</label>
+            <textarea id="message" formControlName="message" rows="5" placeholder="Tell me about the opportunity or project..."></textarea>
+            <span class="err-msg" *ngIf="submitted && f['message'].errors?.['required']">Message is required.</span>
+            <span class="err-msg" *ngIf="submitted && f['message'].errors?.['minlength']">Message must be at least 20 characters.</span>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn" [disabled]="submitStatus === 'sending'">
+            <span *ngIf="submitStatus !== 'sending'">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </span>
+            <span *ngIf="submitStatus === 'sending'">
+              <i class="fas fa-spinner fa-spin"></i> Sending...
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

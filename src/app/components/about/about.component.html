@@ -1,0 +1,70 @@
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+
+      <!-- Left: Text -->
+      <div class="about-text">
+        <p class="section-label">Who I Am</p>
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="section-divider"></div>
+
+        <p class="about-para">
+          I'm a <strong>Full Stack Java Developer</strong> based in India with 3.5 years of experience
+          crafting enterprise web applications. I specialize in building robust backend systems with
+          <strong>Spring Boot</strong> and intuitive frontends with <strong>Angular</strong>, all within
+          <strong>Microservices</strong> architectures that scale.
+        </p>
+        <p class="about-para">
+          Currently at <strong>Brightleaf Solutions</strong> in Pune, I'm leading development of a
+          Text Extraction Engine with 15 microservices — reducing document processing time by 30% and
+          slashing critical bugs by 40% through rigorous code quality practices.
+        </p>
+        <p class="about-para">
+          I believe great software starts with clean code, clear communication, and a relentless focus
+          on performance. Outside of code, I'm a multilingual communicator fluent in 4 languages.
+        </p>
+
+        <div class="about-meta">
+          <div class="meta-item">
+            <i class="fas fa-graduation-cap"></i>
+            <div>
+              <strong>B.E. Electrical Engineering</strong>
+              <span>Mauli College, Shegaon · 2017–2021</span>
+            </div>
+          </div>
+          <div class="meta-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Location</strong>
+              <span>Pune / Khamgaon, Maharashtra</span>
+            </div>
+          </div>
+          <div class="meta-item">
+            <i class="fas fa-language"></i>
+            <div>
+              <strong>Languages</strong>
+              <span>{{ languages.join(' · ') }}</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="assets/resume/Pavan_Gajanan_Bakal_Resume.pdf" download class="btn btn-primary" style="margin-top:1.5rem;">
+          <i class="fas fa-download"></i> Download Resume
+        </a>
+      </div>
+
+      <!-- Right: Highlights -->
+      <div class="about-highlights">
+        <div class="highlight-card" *ngFor="let h of highlights">
+          <div class="highlight-icon">
+            <i [class]="h.icon"></i>
+          </div>
+          <div class="highlight-value">{{h.value}}</div>
+          <div class="highlight-label">{{h.label}}</div>
+          <div class="highlight-desc">{{h.desc}}</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

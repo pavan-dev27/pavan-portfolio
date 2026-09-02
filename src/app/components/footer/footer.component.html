@@ -1,0 +1,39 @@
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container footer-top-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>PB<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-tagline">Building robust systems,<br>one microservice at a time.</p>
+      </div>
+
+      <nav class="footer-nav">
+        <a *ngFor="let link of links" (click)="scrollTo(link.href)">{{link.label}}</a>
+      </nav>
+
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/in/pavangbakal/" target="_blank" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:pavangbakal@gmail.com" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="tel:+918010431769" class="social-link">
+          <i class="fas fa-phone"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p class="copyright">
+        &copy; {{year}} <span>Pavan Gajanan Bakal</span>. Crafted with Angular &amp; ☕
+      </p>
+      <button class="back-to-top" (click)="scrollToTop()" title="Back to top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+</footer>
