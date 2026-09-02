@@ -3,7 +3,7 @@
     <div class="section-header">
       <p class="section-label">What I Know</p>
       <h2 class="section-title">Technical <span>Skills</span></h2>
-      <div class="section-divider"></div>
+      <div class="section-divider" style="margin: 0 auto 1rem;"></div>
       <p class="section-sub">A broad toolkit honed across enterprise projects, government portals, and cloud-native systems.</p>
     </div>
 
@@ -13,7 +13,7 @@
         <div class="group-header">
           <div class="group-icon" [style.background]="'rgba(' + hexToRgb(group.color) + ', 0.1)'"
                [style.border-color]="'rgba(' + hexToRgb(group.color) + ', 0.25)'">
-            <i [class]="group.icon" [style.color]="group.color"></i>
+            <i [class]="group.icon + ' icon-beat'" [style.color]="group.color"></i>
           </div>
           <h3 class="group-title">{{group.category}}</h3>
         </div>

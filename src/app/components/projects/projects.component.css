@@ -46,6 +46,49 @@
   justify-content: center;
   border: 1px solid;
   font-size: 1.1rem;
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  animation: fileIconFloat 4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.project-icon-wrap::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 14px;
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.16), transparent 65%);
+  opacity: 0;
+  transition: opacity var(--transition);
+  z-index: -1;
+}
+
+.project-icon-wrap:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.12);
+}
+
+.project-icon-wrap:hover::after {
+  opacity: 1;
+}
+
+.project-icon-wrap i {
+  display: inline-block;
+  animation: fileIconBounce 2.8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes fileIconFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes fileIconBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  20% { transform: translateY(-2px) scale(1.04); }
+  40% { transform: translateY(0) scale(1); }
+  60% { transform: translateY(-4px) scale(1.08); }
+  80% { transform: translateY(0) scale(1); }
 }
 
 .project-period {
