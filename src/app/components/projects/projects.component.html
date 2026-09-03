@@ -36,6 +36,13 @@
           <span class="tag" *ngFor="let t of project.tech">{{t}}</span>
         </div>
 
+        <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank"
+           rel="noopener noreferrer" class="project-link">
+          <i class="fab fa-github"></i>
+          <span>View on GitHub</span>
+          <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
+
         <div class="card-glow" [style.background]="project.color + '08'"></div>
       </div>
     </div>

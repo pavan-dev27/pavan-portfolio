@@ -26,7 +26,7 @@ export class SkillsComponent {
       category: 'Frontend',
       icon: 'fas fa-desktop',
       color: '#7c3aed',
-      skills: ['Angular 12+', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'ExtJS']
+      skills: ['Angular 19', 'TypeScript', 'JavaScript', 'ExtJS']
     },
     {
       category: 'Database',
@@ -38,13 +38,13 @@ export class SkillsComponent {
       category: 'DevOps & Tools',
       icon: 'fas fa-tools',
       color: '#f59e0b',
-      skills: ['Maven', 'Git', 'GitHub', 'GitLab', 'Docker (Basic)', 'Apache Tomcat', 'CI/CD Pipelines', 'IntelliJ IDEA', 'VS Code']
+      skills: ['Maven', 'Git', 'GitHub', 'GitLab', 'Docker (Basic)', 'CI/CD Pipelines']
     },
     {
       category: 'Cloud',
       icon: 'fas fa-cloud',
       color: '#ef4444',
-      skills: ['AWS S3', 'GCP Cloud Storage', 'GCP IAM', 'OAuth 2.0', 'Cloud Functions']
+      skills: ['AWS S3', 'AWS SQS', 'GCP Cloud Storage', 'GCP IAM', 'OAuth 2.0', 'Cloud Functions']
     },
     {
       category: 'Quality',

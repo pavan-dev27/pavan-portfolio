@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 interface Project {
   title: string;
   subtitle: string;
+  githubUrl?: string;
   period: string;
   description: string;
   highlights: string[];
@@ -22,6 +23,7 @@ export class ProjectsComponent {
     {
       title: 'Text Extraction Engine',
       subtitle: 'Enterprise Document Processing Platform',
+      githubUrl: 'https://github.com/pavangbakal',
       period: '2024 – Present',
       description: 'A distributed, cloud-native document processing system designed to streamline text extraction, analysis, and reporting at enterprise scale.',
       highlights: [
@@ -39,6 +41,7 @@ export class ProjectsComponent {
     {
       title: 'CEICED Portal',
       subtitle: 'Gujarat Government Licensing Portal System',
+      githubUrl: 'https://github.com/pavangbakal',
       period: '2023 – 2024',
       description: 'Official government portal for issuing authorized licenses to Supervisors, Wiremen, Contractors, and Lift/Escalator operators across Gujarat.',
       highlights: [
@@ -56,6 +59,7 @@ export class ProjectsComponent {
     {
       title: 'LB Exam Portal',
       subtitle: 'Online Examination Management System',
+      githubUrl: 'https://github.com/pavangbakal',
       period: '2023 – 2024',
       description: 'A full-featured exam management portal built with JSP and Java EE, handling exam scheduling, fee collection, and result management.',
       highlights: [
