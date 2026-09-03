@@ -98,11 +98,19 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto 0.75rem;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  animation: softFloat 4.2s ease-in-out infinite;
+  will-change: transform;
 }
 
 .highlight-icon i {
   color: var(--accent-primary);
   font-size: 1rem;
+}
+
+.highlight-card:hover .highlight-icon {
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.12);
+  border-color: rgba(0, 212, 255, 0.35);
 }
 
 .highlight-value {

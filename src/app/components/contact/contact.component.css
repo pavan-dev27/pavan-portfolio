@@ -58,6 +58,21 @@
   color: var(--accent-primary);
   font-size: 0.9rem;
   flex-shrink: 0;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.info-icon i {
+  display: inline-block;
+  transform-origin: center bottom;
+}
+
+.info-icon.icon-bounce i {
+  animation: iconBounce 2.7s ease-in-out infinite;
+}
+
+.info-card:hover .info-icon {
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.12);
+  border-color: rgba(0, 212, 255, 0.35);
 }
 
 .info-label {

@@ -10,7 +10,7 @@
            [class.featured]="project.featured">
 
         <div class="project-top">
-          <div class="project-icon-wrap" [style.background]="'rgba(0,0,0,0.3)'"
+          <div class="project-icon-wrap icon-float" [style.background]="'rgba(0,0,0,0.3)'"
                [style.border-color]="project.color + '33'">
             <i [class]="project.icon" [style.color]="project.color"></i>
           </div>
@@ -35,6 +35,13 @@
         <div class="project-tech">
           <span class="tag" *ngFor="let t of project.tech">{{t}}</span>
         </div>
+
+        <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank"
+           rel="noopener noreferrer" class="project-link">
+          <i class="fab fa-github"></i>
+          <span>View on GitHub</span>
+          <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+        </a>
 
         <div class="card-glow" [style.background]="project.color + '08'"></div>
       </div>

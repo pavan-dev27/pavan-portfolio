@@ -43,6 +43,13 @@
   border: 1px solid;
   flex-shrink: 0;
   font-size: 0.95rem;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  animation: softFloat 4.6s ease-in-out infinite;
+  will-change: transform;
+}
+
+.skill-group:hover .group-icon {
+  box-shadow: 0 0 18px rgba(0, 212, 255, 0.12);
 }
 
 .group-title {
