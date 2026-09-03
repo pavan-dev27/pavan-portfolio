@@ -3,7 +3,7 @@ name: Deploy Angular portfolio to GitHub Pages
 on:
   push:
     branches:
-      - pavan-dev1
+      - main
   workflow_dispatch:
 
 permissions:
